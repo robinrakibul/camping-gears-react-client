@@ -6,7 +6,7 @@ const Header = () => {
         <header className="bg-[#001730] text-white">
             <div className='flex justify-center'>
                 <div className="logo mt-3 mb-3">
-                    <Link to="/"><h1 className='font-waterbrush text-6xl p-5'>Camping Gears</h1></Link>
+                    <Link to="/"><h1 className='font-waterbrush p-5 text-3xl md:text-5xl'>Camping Gears</h1></Link>
                 </div>
             </div>
             <ul className='font-[poppins] pt-3 pb-3 text-xl font-medium border-t-2 border-b-2 border-white'>
