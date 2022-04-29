@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         waterbrush: ["Water Brush", "cursive"],
+        librebodoni: ["Libre+Bodoni", "Poppins"],
        },
     },
   },
