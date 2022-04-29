@@ -4,7 +4,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className='ml-2 mr-10 text-white md:flex justify-around mb-5'>
+        <div className='ml-2 mr-10 text-white md:flex justify-around mb-10'>
             <div className='mt-16'>
                 <p className='text-xl text-[#fe4a49]'>Track your sales now!</p>
                 <h1 className='font-[librebodoni] text-5xl md:text-7xl font-bold mb-5'>Keep track of <br /> your camping inventory</h1>
