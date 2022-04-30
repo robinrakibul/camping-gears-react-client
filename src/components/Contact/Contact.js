@@ -4,17 +4,17 @@ import StoreMapLocation from '../StoreMapLocation.js/StoreMapLocation';
 const Contact = () => {
     return (
         <div>
-            <div className="container my-12 py-12 mx-auto px-4 md:px-6 lg:px-12">
+            <div>
                 <section className="mb-20 text-gray-800">
                     <h2 className='text-white font-[Poppins] text-2xl font-light border-b-2 ml-5 mr-5 md:ml-64 md:mr-64 mb-10'>Get In Touch</h2>
                     <p className="text-center text-white mb-10 md:mb-14 mx-auto">
                         Did you liked my work? Do you have any suggestions to give? Send me a message.
                     </p>
-                    <div className="md:flex md:justify-between mr-5">
+                    <div className="mr-24 flex flex-wrap justify-center md:flex md:justify-between md:mr-5">
                         <div className='w-max ml-32'>
                             <StoreMapLocation></StoreMapLocation>
                         </div>
-                        <form action="https://formspree.io/f/xqkngywv" method="POST" className="w-96 grid grid-cols-1 gap-4 mr-28">
+                        <form action="https://formspree.io/f/xqkngywv" method="POST" className="w-full md:w-96 md:mr-28 md:mt-0 md:ml-0 grid grid-cols-1 gap-4 mr-0 ml-16 mt-10">
                             <h1 className='text-xl text-white font-light'>Contact Form</h1>
                             <input className='rounded p-2' name='name' type="text" placeholder='Your Name' />
                             <input className='rounded p-2' name='email' type="email" placeholder='Your Email Address' />
