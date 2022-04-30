@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "title": "Rain Jacket",
+    "supplier": "Jochen Simpson",
+    "price": 2600,
+    "quantity": 10,
+    "description": "A light weight compact full waterproof rain jacket can save you when you get in bad weather. Multipurpose design enables it to use as a Trap or Mat as well",
+    "image": "https://i.ibb.co/M6HWD8X/rain-jacket.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Hiking Bag",
+    "price": 3000,
+    "description": "A Perfect hiking bag for long-distance trekking and travel, day-to-day use, vacation, etc",
+    "image": "https://i.ibb.co/k5qDJJ1/hiking-bag.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Camping Tent 2P",
+    "price": 10750,
+    "description": "A tent for two person which has double wall structure that provides excellent windproof, waterproof performance and avoids condensation",
+    "image": "https://i.ibb.co/SxfrH29/tent2p.png"
+  },
+  {
+    "id": 4,
+    "title": "Waterproof Hiking Shoes",
+    "price": 8200,
+    "description": "Hiking shoe which is durable and has leather upper prevents debris from entering the shoe and limits wear",
+    "image": "https://i.ibb.co/YNnq1Bk/shoe.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Drybag",
+    "price": 700,
+    "description": "Using a drybag inside your backpack will ensure all your belongings are dry even if you are caught in bad weather or travel by water way and accidently immerse your bag in water body.",
+    "image": "https://i.ibb.co/LkLBhf6/drybag.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Reflective Vest",
+    "price": 1300,
+    "description": "The purpose of this safety vests is to allow the wearer to be seen and to alert all that a person is present, especially in a low visibility situation",
+    "image": "https://i.ibb.co/PMYgwZH/reflective-vest.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Portable Camp Stove",
+    "price": 1270,
+    "description": "The burner is exquisite and the firepower is strong. It is a piece of good outdoor equipment which is necessary for travelling",
+    "image": "https://i.ibb.co/M67k7w8/portable-stove.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Hammock",
+    "price": 3000,
+    "description": "A budget friendly lightweight travelling hammock.A Carry pouch and a strap included",
+    "image": "https://i.ibb.co/ZxsgcYc/hammock.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Envelope Style Sleeping Bag",
+    "price": 2025,
+    "description": "Our camping designers have developed this sleeping bag to sleep comfortably when camping in temperatures close to 20°",
+    "image": "https://i.ibb.co/dJ6PZRL/sleepingbag.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Inflateable Camping Pillow",
+    "price": 500,
+    "description": "The comfortable solution for every night on your camping or trekking trips.The ultra-light and compact pillow",
+    "image": "https://i.ibb.co/ZgGWxN0/pillow.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Camping Light White",
+    "price": 600,
+    "description": "You can use it under a tent or outside, camping or bivouacking. This light has power of 40 lumens and 50 hours of full-power rechargeable battery life",
+    "image": "https://i.ibb.co/PY27tBk/camping-light.jpg"
+  }
+]
