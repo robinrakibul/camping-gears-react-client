@@ -3,20 +3,20 @@ import 'tw-elements';
 
 const Footer = () => {
     return (
-        <div class="bg-gray-100 text-center">
-            <div class="px-6 pt-6">
+        <div className="bg-gray-100 text-center">
+            <div className="px-6 pt-6">
                 <form action="">
-                    <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
-                        <div class="md:ml-auto md:mb-6">
-                            <p class="text-gray-800">
+                    <div className="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
+                        <div className="md:ml-auto md:mb-6">
+                            <p className="text-gray-800">
                                 <strong>Sign up for our newsletter</strong>
                             </p>
                         </div>
 
-                        <div class="md:mb-6">
+                        <div className="md:mb-6">
                             <input
                                 type="text"
-                                class="
+                                className="
               form-control
               block
               w-full
@@ -37,14 +37,14 @@ const Footer = () => {
                                 placeholder="Email address" />
                         </div>
 
-                        <div class="md:mr-auto mb-6">
-                            <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Subscribe</button>
+                        <div className="md:mr-auto mb-6">
+                            <button type="button" className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Subscribe</button>
                         </div>
                     </div>
                 </form>
             </div>
 
-            <div class="bg-[#001730] text-center text-white p-4">
+            <div className="bg-[#001730] text-center text-white p-4">
                COPYRIGHT &copy; 2022 RAKIBUL HASSAN ROBIN
             </div>
         </div>

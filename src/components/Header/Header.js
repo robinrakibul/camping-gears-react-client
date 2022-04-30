@@ -10,11 +10,11 @@ const Header = () => {
                 </div>
             </div>
             <ul className='font-[poppins] pt-3 pb-3 text-xl font-medium border-t-2 border-b-2 border-white'>
-                <Link className='ml-5 mr-5 hover:text-[#fe4a49] duration-300' to="/home">Home</Link>
-                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/home">Items</Link>
-                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/home">Login</Link>
-                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/home">Blogs</Link>
-                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/home">Contact</Link>
+                <Link className='ml-5 mr-5 hover:text-[#fe4a49] duration-300' to="/">Home</Link>
+                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/items">Inventory</Link>
+                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/login">Login</Link>
+                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/blogs">Blogs</Link>
+                <Link className='mr-5 hover:text-[#fe4a49] duration-300' to="/contact">Contact</Link>
             </ul>
         </header>
     );
