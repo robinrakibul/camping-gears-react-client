@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import Contact from '../Contact/Contact';
 import SingleItem from '../InventoryItems/SingleItem';
-import StoreMapLocation from '../StoreMapLocation.js/StoreMapLocation';
 
 const Home = () => {
     const [items, setitems] = useState([]);
@@ -22,7 +21,6 @@ const Home = () => {
                         </SingleItem>)
                 }
             </div>
-            <StoreMapLocation></StoreMapLocation>
             <Contact></Contact>
         </div>
     );
