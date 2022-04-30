@@ -14,14 +14,13 @@ const Contact = () => {
                         <div className='w-max ml-32'>
                             <StoreMapLocation></StoreMapLocation>
                         </div>
-                        <div className="w-96 grid grid-cols-1 gap-4 mr-28">
+                        <form action="https://formspree.io/f/xqkngywv" method="POST" className="w-96 grid grid-cols-1 gap-4 mr-28">
                             <h1 className='text-xl text-white font-light'>Contact Form</h1>
-                            <input className='rounded p-2' type="text" placeholder='Your Name' />
-                            <input className='rounded p-2' type="text" placeholder='Your Name' />
-                            <input className='rounded p-2' type="text" placeholder='Your Name' />
-                            <input className='rounded p-2' type="text" placeholder='Your Name' />
-                            <button className='pt-3 pb-3 pl-4 pr-4 w-80 mx-auto rounded bg-orange-600 hover:bg-orange-700 mb-5 text-white' data-mdb-ripple="true" data-mdb-ripple-color="light">Start Now</button>
-                        </div>
+                            <input className='rounded p-2' name='name' type="text" placeholder='Your Name' />
+                            <input className='rounded p-2' name='email' type="email" placeholder='Your Email Address' />
+                            <textarea className='rounded p-2' rows='4' placeholder='Message' name='message'/>
+                            <button type="submit" className='pt-3 pb-3 pl-4 pr-4 w-80 mx-auto rounded bg-orange-600 hover:bg-orange-700 mb-5 text-white' data-mdb-ripple="true" data-mdb-ripple-color="light">Start Now</button>
+                        </form>
                     </div>
                 </section>
 
