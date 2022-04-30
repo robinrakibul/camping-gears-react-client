@@ -7,12 +7,7 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB96oG5AQJ86nNGw0yz-FUTpiEqbgrxDVs",
-    authDomain: "camping-gears-ac126.firebaseapp.com",
-    projectId: "camping-gears-ac126",
-    storageBucket: "camping-gears-ac126.appspot.com",
-    messagingSenderId: "94812875043",
-    appId: "1:94812875043:web:a49845fcb21cbd23520496"
+    
 };
 
 // Initialize Firebase
