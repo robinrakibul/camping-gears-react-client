@@ -11,7 +11,7 @@ const Banner = () => {
                 <button className='pt-3 pb-3 pl-4 pr-4 rounded bg-orange-600 hover:bg-orange-700 mb-5' data-mdb-ripple="true" data-mdb-ripple-color="light">Start Now</button>
             </div>
             <div>
-                <img className='rounded m-2 ml-5 md:ml-0' width='650px' src={campimage} alt="" />
+                <img className='rounded m-2 ml-5 md:ml-0 hover:scale-90 duration-500' width='650px' src={campimage} alt="" />
             </div>
         </div>
     );
