@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import Contact from '../Contact/Contact';
 import SingleItem from '../InventoryItems/SingleItem';
+import Speciality from '../Speciality/Speciality';
 
 const Home = () => {
     const [items, setitems] = useState([]);
@@ -21,6 +22,7 @@ const Home = () => {
                         </SingleItem>)
                 }
             </div>
+            <Speciality></Speciality>
             <Contact></Contact>
         </div>
     );
