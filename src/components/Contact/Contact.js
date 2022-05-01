@@ -19,7 +19,7 @@ const Contact = () => {
                             <input className='rounded p-2' name='name' type="text" placeholder='Your Name' />
                             <input className='rounded p-2' name='email' type="email" placeholder='Your Email Address' />
                             <textarea className='rounded p-2' rows='4' placeholder='Message' name='message'/>
-                            <button type="submit" className='pt-3 pb-3 pl-4 pr-4 w-80 mx-auto rounded bg-orange-600 hover:bg-orange-700 mb-5 text-white' data-mdb-ripple="true" data-mdb-ripple-color="light">Start Now</button>
+                            <button type="submit" className='pt-3 pb-3 pl-4 pr-4 w-80 mx-auto rounded bg-orange-600 hover:bg-orange-700 mb-5 text-white' data-mdb-ripple="true" data-mdb-ripple-color="light">Send Message</button>
                         </form>
                     </div>
                 </section>
