@@ -29,7 +29,6 @@ const Header = () => {
             flex flex-col md:flex-row md:justify-center absolute md:static md:z-auto z[-1] bg-[#001730] w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-20 opacity-100' : 'top-[-490px] opacity-0 md:opacity-100'}`}>
                 <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/">Home</Link>
                 <Link className='mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/blogs">Blogs</Link>
-                <Link className='mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/contact">Contact</Link>
                 {
                     user ? 
                      <button className='mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300'
