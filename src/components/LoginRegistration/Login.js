@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import loginImg from '../../img/login.svg';
+import google from '../../img/google.png';
 const Login = () => {
     return (
         <div className='flex flex-col mt-5 mb-10 items-center md:justify-between md:flex-row md:mb-10 md:mt-0 font-[poppins]'>
@@ -16,6 +17,13 @@ const Login = () => {
                         <button className='pt-3 pb-3 pl-4 pr-4 w-52 rounded bg-orange-600 hover:bg-orange-700 mb-5' data-mdb-ripple="true" data-mdb-ripple-color="light">Login</button>
                     </div>
                 </form>
+                <p className='mt-2'>Or you can login with,</p>
+                <div className=''>
+                    <button
+                        className='btn btn-info w-50 d-block mx-auto mt-4 my-2'>
+                        <img style={{ width: '30px' }} src={google} alt="" />
+                    </button>
+                </div>
                 <p className='mt-3 mb-1'>New Here? <Link className='text-[#fe4a49] font-medium' to='/register'>Register</Link></p>
                 <p>Forget Password? <button className='text-[#fe4a49] font-medium'>Reset Password</button> </p>
             </div>

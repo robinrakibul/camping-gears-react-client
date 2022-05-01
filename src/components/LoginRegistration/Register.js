@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import registerImg from '../../img/register.jpg';
-
+import google from '../../img/google.png';
 const Register = () => {
     return (
         <div className='text-white font-[poppins] flex flex-col md:flex-row items-center md:justify-between mb-10'>
@@ -25,6 +25,13 @@ const Register = () => {
                     </div>
                 </form>
                 <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none text-[#fe4a49]'>Please Login</Link> </p>
+                <p className='mt-2'>Or you can join with,</p>
+                <div className=''>
+                    <button
+                        className='btn btn-info w-50 d-block mx-auto mt-4 my-2'>
+                        <img style={{ width: '30px' }} src={google} alt="" />
+                    </button>
+                </div>
             </div>
         </div>
     );
