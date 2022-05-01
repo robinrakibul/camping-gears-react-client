@@ -11,10 +11,9 @@ const Login = () => {
 
     const emailreference = useRef('');
     const passwordreference = useRef('');
-
-
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     // Email Login
-    const [ signInWithEmailAndPassword, user, loading, error ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     // Google Login
     const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
     let errorOccured;
@@ -22,7 +21,19 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (loading || loading2) {
+    
+    const resetPassword = async () => {
+        const email = emailreference.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Email sent!');
+        }
+        else {
+            toast('Please enter your email address correctly');
+        }
+    }
+
+    if (loading || loading2 || sending) {
         // Spinner
         return <div>
             <svg role="status" className="inline mt-52 mb-52 mr-2 w-10 h-10 text-white animate-spin fill-red-500" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +42,7 @@ const Login = () => {
             </svg>
         </div>
     }
-    
+
 
     if (error || error2) {
         errorOccured = <p className='text-red-500'>Error: {error?.message}</p>
@@ -48,6 +59,10 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     }
 
+    const navigateReg = event =>{
+        navigate('/register');
+    }
+    
     return (
         <div className='flex flex-col mt-5 mb-10 items-center md:justify-between md:flex-row md:mb-10 md:mt-0 font-[poppins]'>
             <div className='w-full ml-10'>
@@ -70,9 +85,9 @@ const Login = () => {
                         <img className='bg-white w-12 rounded p-2' src={google} alt="" />
                     </button>
                 </div>
-                <p className='mt-3 mb-1'>New Here? <Link className='text-[#fe4a49] font-medium' to='/register'>Register</Link></p>
-                <p>Forget Password? <button className='text-[#fe4a49] font-medium'>Reset Password</button> </p>
-                <ToastContainer/>
+                <p className='mt-3 mb-1'>New Here? <Link className='text-[#fe4a49] font-medium' to='/register' onClick={navigateReg}>Register</Link></p>
+                <p>Forget Password? <button className='text-[#fe4a49] font-medium' onClick={resetPassword}>Reset Password</button> </p>
+                <ToastContainer />
             </div>
         </div>
     );
