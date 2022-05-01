@@ -26,10 +26,10 @@ const Login = () => {
         const email = emailreference.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Email sent!');
+            toast.success('Email sent!');
         }
         else {
-            toast('Please enter your email address correctly');
+            toast.warn('Please enter your email address correctly');
         }
     }
 
