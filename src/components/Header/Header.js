@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='text-2xl absolute top-6 right-5 pb-2 cursor-pointer md:hidden' onClick={()=>setOpen(!open)}>
-                <FontAwesomeIcon icon={open ? faBars : faXmark }></FontAwesomeIcon>
+                <FontAwesomeIcon icon={open ? faXmark : faBars }></FontAwesomeIcon>
             </div>
             <ul className={`font-[poppins] md:pt-3 md:pb-3 md:mb-0 text-xl font-medium md:border-t-2 md:border-b-2 md:border-white
             flex flex-col md:flex-row md:justify-center absolute md:static md:z-auto z[-1] bg-[#001730] w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-20 opacity-100' : 'top-[-490px] opacity-0 md:opacity-100'}`}>
