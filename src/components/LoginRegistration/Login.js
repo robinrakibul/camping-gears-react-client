@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import loginImg from '../../img/login.svg';
 const Login = () => {
     return (
-        <div className='flex items-center justify-between mb-10 font-[poppins]'>
+        <div className='flex flex-col mt-5 mb-10 items-center md:justify-between md:flex-row md:mb-10 md:mt-0 font-[poppins]'>
             <div className='w-full ml-10'>
                 <img width='450px' src={loginImg} alt="" />
             </div>

@@ -4,9 +4,9 @@ import registerImg from '../../img/register.jpg';
 
 const Register = () => {
     return (
-        <div className='text-white font-[poppins] flex items-center justify-between mb-10'>
-            <div className='w-full ml-10'>
-                <img className='mt-5 rounded-3xl' width='450px' src={registerImg} alt="" />
+        <div className='text-white font-[poppins] flex flex-col md:flex-row items-center md:justify-between mb-10'>
+            <div className='w-full ml-10 mr-10'>
+                <img className='mt-5 ml-8 md:ml-0 md:mt-0 rounded-3xl' width='400px' src={registerImg} alt="" />
             </div>
             <div className='mr-10 w-3/4'>
                 <h2 className='text-primary text-center text-xl font-medium mt-10 mb-5'>Register Here</h2>
