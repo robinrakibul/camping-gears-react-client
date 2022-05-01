@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginImg from '../../img/login.svg';
 import google from '../../img/google.png';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
 
     const emailreference = useRef('');
@@ -28,6 +31,7 @@ const Login = () => {
             </svg>
         </div>
     }
+    
 
     if (error || error2) {
         errorOccured = <p className='text-red-500'>Error: {error?.message}</p>
@@ -68,6 +72,7 @@ const Login = () => {
                 </div>
                 <p className='mt-3 mb-1'>New Here? <Link className='text-[#fe4a49] font-medium' to='/register'>Register</Link></p>
                 <p>Forget Password? <button className='text-[#fe4a49] font-medium'>Reset Password</button> </p>
+                <ToastContainer/>
             </div>
         </div>
     );
