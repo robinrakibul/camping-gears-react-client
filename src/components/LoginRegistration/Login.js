@@ -86,8 +86,7 @@ const Login = () => {
                     </button>
                 </div>
                 <p className='mt-3 mb-1'>New Here? <Link className='text-[#fe4a49] font-medium' to='/register' onClick={navigateReg}>Register</Link></p>
-                <p>Forget Password? <button className='text-[#fe4a49] font-medium' onClick={resetPassword}>Reset Password</button> </p>
-                <ToastContainer />
+                <p>Forget Password? <button className='text-[#fe4a49] font-medium' onClick={resetPassword}>Reset Password</button> </p>                
             </div>
         </div>
     );

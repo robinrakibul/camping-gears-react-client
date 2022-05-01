@@ -17,6 +17,10 @@ const RequireAuth = ({ children }) => {
         </div>
     }
 
+    if(error){
+        console.log(error);
+    }
+    
     if (!user) {
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
@@ -34,7 +38,7 @@ const RequireAuth = ({ children }) => {
             >
                 Send Verification Email Again
             </button>
-            <ToastContainer></ToastContainer>
+            <ToastContainer/>
         </div>
     }
 
