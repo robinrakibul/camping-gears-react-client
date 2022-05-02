@@ -2,7 +2,6 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
 const ItemDetail = () => {
     let navigate = useNavigate();
     const navigateInventories = () => {
@@ -11,6 +10,7 @@ const ItemDetail = () => {
 
     // Using useParams to get id from url
     const { itemsId } = useParams();
+
     return (
         <div className='text-white'>
             <h3 className='mb-10'>This is inventory item detail : {itemsId}</h3>

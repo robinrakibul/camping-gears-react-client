@@ -35,10 +35,10 @@ const Header = () => {
                 <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/blogs">Blogs</Link>
                 {
                     user ? 
-                     <button className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300'
+                     <button className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300 font-[poppins] font-medium'
                     onClick={() => logOut()}>Sign&nbsp;out</button> 
                     :
-                    <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/login">Login</Link>
+                    <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300 font-[poppins] font-medium' to="/login">Login</Link>
                 }
                 <ToastContainer/>
             </ul>
