@@ -16,7 +16,7 @@ const SingleItem = ({ item }) => {
                     <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
                     <img width='300px' height='auto' className="rounded-t-lg object-cover" src={image} alt="" />
                     </a>
-                    <p className='text-orange-500 font-bold'>Price: {price}</p>
+                    <p className='text-orange-500 font-bold'>Price: {price} Tk</p>
                     <small>Supplier: {supplier}</small>
                     <p className='text-xl font-bold'>Available Quantity: {quantity}</p>
                     <div className="p-6">

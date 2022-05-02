@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
+  content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('tw-elements/dist/plugin')
+    require('tw-elements/dist/plugin'),
+    require('flowbite/plugin')
   ],
 }
