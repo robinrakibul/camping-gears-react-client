@@ -18,13 +18,13 @@ const SingleItem = ({ item }) => {
                     </a>
                     <p className='text-orange-500 font-bold'>Price: {price}</p>
                     <small>Supplier: {supplier}</small>
-                    <p>Available Quantity: {quantity}</p>
+                    <p className='text-xl font-bold'>Available Quantity: {quantity}</p>
                     <div className="p-6">
                         <h5 className="text-gray-900 text-xl font-medium mb-2">{title}</h5>
                         <p className="text-gray-700 text-base mb-4">
                            {description.slice(0,50)}...
                         </p>
-                        <button onClick={()=> itemDetailNavigation(_id)} type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Manage</button>
+                        <button onClick={()=> itemDetailNavigation(_id)} type="button" className=" inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-600 active:shadow-lg transition duration-150 ease-in-out">Stock Update</button>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
@@ -28,13 +29,16 @@ const Header = () => {
             <ul className={`font-[poppins] md:pt-3 md:pb-3 md:mb-0 text-xl font-medium md:border-t-2 md:border-b-2 md:border-white
             flex flex-col md:flex-row md:justify-center absolute md:static md:z-auto z[-1] bg-[#001730] w-full md:w-auto transition-all duration-500 ease-in ${open ? 'top-20 opacity-100' : 'top-[-490px] opacity-0 md:opacity-100'}`}>
                 <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/">Home</Link>
-                <Link className='mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/blogs">Blogs</Link>
+                <HashLink smooth className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="home#speciality">Speciality</HashLink>
+                <HashLink smooth className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="home#slicedItems">Items</HashLink>
+                <HashLink smooth className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="home#contact">Contact</HashLink>
+                <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/blogs">Blogs</Link>
                 {
                     user ? 
-                     <button className='mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300'
+                     <button className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300'
                     onClick={() => logOut()}>Sign&nbsp;out</button> 
                     :
-                    <Link className='mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/login">Login</Link>
+                    <Link className='md:ml-5 mr-5 mb-5 md:mb-0 hover:text-[#fe4a49] duration-300' to="/login">Login</Link>
                 }
                 <ToastContainer/>
             </ul>

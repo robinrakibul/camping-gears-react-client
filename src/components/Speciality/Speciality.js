@@ -4,7 +4,7 @@ import React from 'react';
 
 const Speciality = () => {
     return (
-        <div>
+        <div id='speciality'>
             <h2 className='text-white font-[Poppins] text-2xl font-light border-b-2 ml-5 mr-5 md:ml-64 md:mr-64 mb-10'>Our Speciality</h2>
             <div className='ml-16 mr-16 mt-2 mb-10 grid grid-cols-1 md:grid-cols-2 '>
                 <div>

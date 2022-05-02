@@ -17,7 +17,7 @@ const SlicedItems = () => {
         navigate('/items');
     }
     return (
-        <div>
+        <div id='slicedItems'>
             <h2 className='text-white font-[Poppins] text-2xl font-light border-b-2 ml-5 mr-5 md:ml-64 md:mr-64 mb-10'>Inventory Items</h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
                 {
