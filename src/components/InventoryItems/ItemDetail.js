@@ -1,10 +1,11 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import 'flowbite';
 
 const ItemDetail = () => {
+    const restockref = useRef('');
     let navigate = useNavigate();
     const navigateInventories = () => {
         navigate('/items');
@@ -30,26 +31,57 @@ const ItemDetail = () => {
     }, [item]) /* updates everytime item quantity changes */
 
     // Handle delivered click
-    const handleQuantityReduce = event =>{
+    const handleQuantityReduce = event => {
         event.preventDefault();
-        const found = items.find(existItem =>existItem._id === item._id)
-            if(found && found.quantity >=1){
-                found.quantity = found.quantity-1;
-                const setQuantity = found.quantity;
-                console.log(found.quantity);
-                const url = `http://localhost:5000/items/${itemsId}`;
-                fetch(url, {
-                    method: 'PUT',
-                    headers: {
-                        'content-type' : 'application/json'
-                    },
-                    body: JSON.stringify({ setQuantity })
-                })
+        const found = items.find(existItem => existItem._id === item._id)
+        if (found && found.quantity >= 1) {
+            found.quantity = found.quantity - 1;
+            const setQuantity = parseInt(found.quantity);
+            console.log(found.quantity);
+            const url = `http://localhost:5000/items/${itemsId}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ setQuantity })
+            })
                 .then(res => res.json())
                 .then(data => console.log(data))
-            }
+        }
     }
-    // Using useParams to get id from url
+
+
+    // Quantity Restock
+
+    useEffect(() => {
+        fetch('http://localhost:5000/items')
+            .then(res => res.json())
+            .then(data => setitems(data))
+    }, []);
+
+    // Handle Restock Quantity click
+    const handleRestock = event => {
+        const restockItem = restockref.current.value;
+        event.preventDefault();
+        const found = items.find(existItem => existItem._id === item._id)
+        if (found && found.quantity >= 1) {
+            found.quantity = restockItem;
+            const setQuantity = parseInt(found.quantity);
+            console.log(found.quantity);
+            const url = `http://localhost:5000/items/${itemsId}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ setQuantity })
+            })
+                .then(res => res.json())
+                .then(data => console.log(data))
+        }
+    }
+
     const { itemsId } = useParams();
 
     return (
@@ -69,6 +101,8 @@ const ItemDetail = () => {
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">{item.price} Tk</span>
                         <Link to="" onClick={handleQuantityReduce} className="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800">Delivered</Link>
                     </div>
+                <input type="number" name="restock" ref={restockref} id="" className='text-black p-2 mt-3 mb-3 border-2 border-gray-400 rounded' /> <br />
+                <Link to="" onClick={handleRestock} className="text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800">Restock Quantity</Link>
                 </div>
             </div>
 
