@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SingleItem from './SingleItem';
+import SingleItemProtected from './SingleItemProtected';
 const InventoryItems = () => {
     const [items, setitems] = useState([]);
     useEffect(() => {
@@ -13,8 +13,8 @@ const InventoryItems = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
                 {
                     items.map(item =>
-                        <SingleItem key={item._id} item={item}>
-                        </SingleItem>)
+                        <SingleItemProtected key={item._id} item={item}>
+                        </SingleItemProtected>)
                 }
             </div>
         </div>
