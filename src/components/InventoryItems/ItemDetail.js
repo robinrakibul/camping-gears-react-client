@@ -10,6 +10,16 @@ const ItemDetail = () => {
         navigate('/items');
     }
 
+    // For quantity
+    const [items, setitems] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/items')
+            .then(res => res.json())
+            .then(data => setitems(data))
+    }, []);
+
+    // For all items
     const [item, setItem] = useState({});
 
     useEffect(() => {
@@ -19,6 +29,26 @@ const ItemDetail = () => {
             .then(data => setItem(data))
     }, [])
 
+    // Handle delivered click
+    const handleQuantityReduce = event =>{
+        event.preventDefault();
+        const found = items.find(existItem =>existItem._id === item._id)
+            if(found && found.quantity >=1){
+                found.quantity = found.quantity-1;
+                const setQuantity = found.quantity;
+                console.log(found.quantity);
+                const url = `http://localhost:5000/items/${itemsId}`;
+                fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'content-type' : 'application/json'
+                    },
+                    body: JSON.stringify({ setQuantity })
+                })
+                .then(res => res.json())
+                .then(data => console.log(data))
+            }
+    }
     // Using useParams to get id from url
     const { itemsId } = useParams();
 
@@ -37,7 +67,7 @@ const ItemDetail = () => {
                 <div className="px-5 pt-5 pb-5">
                     <div className="flex justify-between items-center">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">{item.price} Tk</span>
-                        <Link to="" className="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800">Delivered</Link>
+                        <Link to="" onClick={handleQuantityReduce} className="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800">Delivered</Link>
                     </div>
                 </div>
             </div>
