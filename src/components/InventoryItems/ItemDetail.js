@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import 'flowbite';
+import { toast } from 'react-toastify';
 
 const ItemDetail = () => {
     const restockref = useRef('');
@@ -65,8 +66,15 @@ const ItemDetail = () => {
         const restockItem = restockref.current.value;
         event.preventDefault();
         const found = items.find(existItem => existItem._id === item._id)
-        if (found && found.quantity >= 1) {
-            found.quantity = restockItem;
+        if (found && found.quantity >= 0) {
+            console.log(restockItem);
+            if(restockItem!=='')
+            {
+                found.quantity = restockItem;
+            }
+            else{
+                toast.error('Please enter a number to restock quantity')
+            }
             const setQuantity = parseInt(found.quantity);
             console.log(found.quantity);
             const url = `http://localhost:5000/items/${itemsId}`;
@@ -101,8 +109,10 @@ const ItemDetail = () => {
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">{item.price} Tk</span>
                         <Link to="" onClick={handleQuantityReduce} className="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800">Delivered</Link>
                     </div>
-                <input type="number" name="restock" ref={restockref} id="" className='text-black p-2 mt-3 mb-3 border-2 border-gray-400 rounded' /> <br />
-                <Link to="" onClick={handleRestock} className="text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800">Restock Quantity</Link>
+                    <div>
+                        <input type="number" name="restock" ref={restockref} id="" disabled={restockref === null}className='text-black p-2 mt-3 mb-3 border-2 border-gray-400 rounded' /> <br />
+                        <Link to="" onClick={handleRestock} className="text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800">Restock Quantity</Link>
+                    </div>
                 </div>
             </div>
 
