@@ -27,7 +27,7 @@ const ItemDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
-    }, [])
+    }, [item]) /* updates everytime item quantity changes */
 
     // Handle delivered click
     const handleQuantityReduce = event =>{
