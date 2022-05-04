@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const SingleItemProtected = ({ item }) => {
     const { _id, title, image, price, description, supplier, quantity } = item;
@@ -9,6 +10,23 @@ const SingleItemProtected = ({ item }) => {
         navigate(`/items/${id}`)
     }
 
+    const handleDeleteItem = id => {
+        const deletion = window.confirm('Do you really want to delete the item?');
+        if(deletion){
+            const url = `http://localhost:5000/items/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                },
+            })
+            .then(res=>res.json())
+            .then(data =>{
+                console.log(data);
+                toast.success('Item has been deleted successfully');
+            })
+        }
+    }
     return (
         <div>
             <div className="flex justify-center mb-5">
@@ -25,12 +43,11 @@ const SingleItemProtected = ({ item }) => {
                             {description.slice(0, 50)}...
                         </p>
                         <button onClick={() => itemDetailNavigation(_id)} type="button" className=" inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-600 active:shadow-lg transition duration-150 ease-in-out">Stock Update</button>
-                        <button type="button" className=" ml-4 inline-block px-6 py-2.5 bg-red-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-red-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
+                        <button onClick={() => handleDeleteItem(_id)} type="button" className=" ml-4 inline-block px-6 py-2.5 bg-red-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-red-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-600 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                     </div>
                 </div>
             </div>
         </div>
-    );
-};
+    )};
 
 export default SingleItemProtected;

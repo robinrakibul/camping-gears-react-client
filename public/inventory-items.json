@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Rain Jacket",
     "supplier": "Jochen Simpson",
     "price": 2600,
@@ -9,7 +8,6 @@
     "image": "https://i.ibb.co/ctHrNB9/rain-jacket.jpg"
   },
   {
-    "id": 2,
     "title": "Hiking Bag",
     "supplier": "Maurice Nguyen",
     "price": 3000,
@@ -18,7 +16,6 @@
     "image": "https://i.ibb.co/mNMZ6qr/hiking-bag.jpg"
   },
   {
-    "id": 3,
     "title": "Camping Tent 2P",
     "supplier": "Claire Daniels",
     "price": 10750,
@@ -27,7 +24,6 @@
     "image": "https://i.ibb.co/3SJs0Md/tent2p.png"
   },
   {
-    "id": 4,
     "title": "Waterproof Hiking Shoes",
     "supplier": "Chris Burton",
     "price": 8200,
@@ -36,7 +32,6 @@
     "image": "https://i.ibb.co/nzr9r50/shoe.jpg"
   },
   {
-    "id": 5,
     "title": "Drybag",
     "supplier": "Lloyd Romero",
     "price": 700,
@@ -45,7 +40,6 @@
     "image": "https://i.ibb.co/QfW3fGM/drybag.jpg"
   },
   {
-    "id": 6,
     "title": "Reflective Vest",
     "supplier": "Lloyd Romero",
     "price": 1300,
@@ -54,7 +48,6 @@
     "image": "https://i.ibb.co/F59HGfw/reflective-vest.jpg"
   },
   {
-    "id": 7,
     "title": "Portable Camp Stove",
     "supplier": "Anita Washington",
     "price": 1270,
@@ -63,7 +56,6 @@
     "image": "https://i.ibb.co/dc68HPg/portable-stove.jpg"
   },
   {
-    "id": 8,
     "title": "Hammock",
     "supplier": "Anita Washington",
     "price": 3000,
@@ -72,7 +64,6 @@
     "image": "https://i.ibb.co/PYFsR1x/hammock.jpg"
   },
   {
-    "id": 9,
     "title": "Envelope Style Sleeping Bag",
     "supplier": "Anita Washington",
     "price": 2025,
@@ -81,7 +72,6 @@
     "image": "https://i.ibb.co/HX411bT/sleepingbag.jpg"
   },
   {
-    "id": 10,
     "title": "Inflateable Camping Pillow",
     "supplier": "Maurice Nguyen",
     "price": 500,
@@ -90,7 +80,6 @@
     "image": "https://i.ibb.co/pvzBKxt/pillow.jpg"
   },
   {
-    "id": 11,
     "title": "Camping Light White",
     "supplier": "Lloyd Romero",
     "price": 600,
