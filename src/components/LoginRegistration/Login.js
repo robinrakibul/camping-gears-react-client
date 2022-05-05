@@ -58,7 +58,7 @@ const Login = () => {
         const email = emailreference.current.value;
         const password = passwordreference.current.value;
         await signInWithEmailAndPassword(email, password);
-        const {data} = await axios.post('http://localhost:5000/login', {email});
+        const {data} = await axios.post('https://warehouse-management-server.herokuapp.com/login', {email});
         localStorage.setItem('accessToken',data.accessToken);
         navigate(from, { replace: true });
     }

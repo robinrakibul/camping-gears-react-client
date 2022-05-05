@@ -40,7 +40,7 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password);
-        const {data} = await axios.post('http://localhost:5000/login', {email});
+        const {data} = await axios.post('https://warehouse-management-server.herokuapp.com/login', {email});
         console.log(data);
         localStorage.setItem('accessToken',data.accessToken);
         event.target.reset();
