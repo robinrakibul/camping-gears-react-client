@@ -12,6 +12,7 @@ import Register from './components/LoginRegistration/Register';
 import RequireAuth from './components/LoginRegistration/RequireAuth';
 import Blogs from './components/Blogs/Blogs';
 import Contact from './components/Contact/Contact';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
             <MyItems></MyItems>
           </RequireAuth>
         }></Route>
+        <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
