@@ -6,6 +6,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
 
@@ -49,14 +50,17 @@ const Login = () => {
     }
 
     if (user || user2) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
-    const loginFormSubmit = event => {
+    const loginFormSubmit = async event => {
         event.preventDefault();
         const email = emailreference.current.value;
         const password = passwordreference.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        localStorage.setItem('accessToken',data.accessToken);
+        navigate(from, { replace: true });
     }
 
     const navigateReg = event =>{

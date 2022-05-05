@@ -30,7 +30,7 @@ const RequireAuth = ({ children }) => {
             <h3 className='text-red-500'>Your Email is not verified!!</h3>
             <h5 className='text-green-400'> Please Verify your email address</h5>
             <button
-                className='btn btn-primary'
+                className='pl-5 pr-5 pt-2 pb-2 bg-red-400 rounded text-white mt-4 mb-10'
                 onClick={async () => {
                     await sendEmailVerification();
                     toast.success('Email Sent!');

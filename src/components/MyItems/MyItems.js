@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -7,9 +8,13 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
     const [items, setitems] = useState([]);
     useEffect(() => {
-        fetch(`https://warehouse-management-server.herokuapp.com/myitems?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setitems(data))
+        const getItems = async()=>{
+            const email = user.email;
+            const url = `http://localhost:5000/myitems?email=${email}`;
+            const {data} = await axios.get(url);
+            setitems(data);
+        }
+        getItems();
     }, [items])
     return (
         <div>

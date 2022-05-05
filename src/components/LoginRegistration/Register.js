@@ -4,6 +4,7 @@ import registerImg from '../../img/register.jpg';
 import google from '../../img/google.png';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import axios from 'axios';
 const Register = () => {
     const [agree, setAgree] = useState(false);
     const [ createUserWithEmailAndPassword, user, loading, error ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -39,6 +40,11 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        console.log(data);
+        localStorage.setItem('accessToken',data.accessToken);
+        event.target.reset();
+        navigate('/home');
     }
 
     return (
