@@ -2,7 +2,7 @@
 ## Project Name: Camping Gears
 
 <!-- LIVE WEBSITE LINK -->
-Live Website URL: https://camping-gears-ac126.web.app/
+Live Website URL: https://camping-gears-ac126.web.app/ <br/>
 Live Server URL: https://warehouse-management-server.herokuapp.com/
 
 <!-- ABOUT THE PROJECT -->
@@ -17,7 +17,7 @@ In this project,
 * I have used react router to create navigation bar, set route, protected route, restrictions etc.
 * In manage inventories, user can add item, manage item, delete item, see my items etc.
 * User can update an inventory stock, restock item, deliver item where quantity decreases etc.
-* For look and style, I used tailwind css framework, tailwind-elements, flowbite, toastify, react-hook-form etc
+* For look and style, I used tailwind css framework, tailwind-elements, flowbite, toastify, google fonts, react-hook-form etc
 
 <!-- BUILD WITH -->
 ### Tools That Built With
@@ -28,5 +28,6 @@ The main tools I have used in this project:
 * [Firebase](https://firebase.google.com/)
 * [NodeJs](https://nodejs.org/)
 * [Heroku](https://dashboard.heroku.com/)
+* [JWT](https://jwt.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
