@@ -7,7 +7,7 @@ const InventoryItems = () => {
         fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => setitems(data))
-    }, [])
+    }, [items])
     return (
         <div>
             <h2 className='text-white font-[Poppins] mt-4 text-2xl font-light border-b-2 ml-5 mr-5 md:ml-64 md:mr-64 mb-10'>Inventory Items</h2>
