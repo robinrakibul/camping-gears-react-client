@@ -60,7 +60,7 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
         const {data} = await axios.post('https://warehouse-management-server.herokuapp.com/login', {email});
         localStorage.setItem('accessToken',data.accessToken);
-        navigate(from, { replace: true });
+        navigate('/items');
     }
 
     const navigateReg = event =>{
