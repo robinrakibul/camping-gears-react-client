@@ -6,7 +6,7 @@ const Contact = () => {
         <div id='contact'>
             <div>
                 <section className="mb-20 text-gray-800">
-                    <h2 className='text-white font-[Poppins] text-2xl font-light border-b-2 ml-5 mr-5 md:ml-64 md:mr-64 mb-10'>Get In Touch</h2>
+                    <h2 className='text-white font-[Poppins] text-2xl font-light border-b-2 mt-5 ml-5 mr-5 md:ml-64 md:mr-64 mb-10'>Get In Touch</h2>
                     <p className="text-center text-white mb-10 md:mb-14 mx-auto">
                         Did you liked my work? Do you have any suggestions to give? Send me a message.
                     </p>
