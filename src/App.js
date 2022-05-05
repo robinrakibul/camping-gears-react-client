@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import AddNewItem from './components/InventoryItems/AddItem/AddNewItem';
 import InventoryItems from './components/InventoryItems/InventoryItems';
 import ItemDetail from './components/InventoryItems/ItemDetail';
+import MyItems from './components/MyItems/MyItems';
 import Login from './components/LoginRegistration/Login';
 import Register from './components/LoginRegistration/Register';
 import RequireAuth from './components/LoginRegistration/RequireAuth';
@@ -32,6 +33,11 @@ function App() {
         <Route path='/additem' element={
           <RequireAuth>
             <AddNewItem></AddNewItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
           </RequireAuth>
         }></Route>
       </Routes>
