@@ -107,7 +107,7 @@ const ItemDetail = () => {
                 <div className="px-5 pt-5 pb-5">
                     <div className="flex justify-between items-center">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">{item.price} Tk</span>
-                        <Link to="" onClick={handleQuantityReduce} className="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800">Delivered</Link>
+                        <Link to="" onClick={handleQuantityReduce} className="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800">{item.quantity===0 ? 'Stock Out' : 'Delivered' }</Link>
                     </div>
                     <div>
                         <input type="number" name="restock" ref={restockref} id="" disabled={restockref === null}className='text-black p-2 mt-3 mb-3 border-2 border-gray-400 rounded' /> <br />

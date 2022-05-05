@@ -49,8 +49,8 @@ const Login = () => {
         errorOccured = <p className='text-red-500'>Error: {error?.message}</p>
     }
 
-    if (user || user2) {
-        // navigate(from, { replace: true });
+    if (user2) {
+         navigate(from, { replace: true });
     }
 
     const loginFormSubmit = async event => {
@@ -60,7 +60,7 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
         const {data} = await axios.post('https://warehouse-management-server.herokuapp.com/login', {email});
         localStorage.setItem('accessToken',data.accessToken);
-        navigate('/items');
+        navigate(from, { replace: true });
     }
 
     const navigateReg = event =>{
