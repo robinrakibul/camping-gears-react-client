@@ -10,7 +10,7 @@ const AddNewItem = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/additem`;
+        const url = `https://warehouse-management-server.herokuapp.com/additem`;
         fetch(url, {
             method: 'POST',
             headers: {

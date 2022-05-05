@@ -11,7 +11,7 @@ const MyItemsOnly = ({ item }) => {
     const handleDeleteItem = id => {
         const deletion = window.confirm('Do you really want to delete the item?');
         if (deletion) {
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://warehouse-management-server.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'DELETE',
                 headers: {

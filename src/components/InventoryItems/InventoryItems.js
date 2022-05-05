@@ -4,7 +4,7 @@ import SingleItemProtected from './SingleItemProtected';
 const InventoryItems = () => {
     const [items, setitems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://warehouse-management-server.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setitems(data))
     }, [items])

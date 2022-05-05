@@ -7,7 +7,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
     const [items, setitems] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/myitems?email=${user.email}`)
+        fetch(`https://warehouse-management-server.herokuapp.com/myitems?email=${user.email}`)
             .then(res => res.json())
             .then(data => setitems(data))
     }, [items])
