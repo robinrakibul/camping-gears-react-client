@@ -21,7 +21,8 @@ const AddNewItem = () => {
         .then(res=> res.json())
         .then(data =>{
             console.log(data);
-            toast.success('Item successfully added!')
+            toast.success('Item successfully added!');
+            alert('Item added successfully!');
         } )
     };
 
