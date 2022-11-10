@@ -8,7 +8,7 @@ const SlicedItems = () => {
     const [items, setitems] = useState([]);
     let navigate = useNavigate();
     useEffect(() => {
-        fetch('https://warehouse-management-server.herokuapp.com/items')
+        fetch('https://camping-gears-server.onrender.com/items')
             .then(res => res.json())
             .then(data => setitems(data))
     }, []);

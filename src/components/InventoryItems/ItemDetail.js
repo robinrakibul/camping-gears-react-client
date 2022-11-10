@@ -16,7 +16,7 @@ const ItemDetail = () => {
     const [items, setitems] = useState([]);
 
     useEffect(() => {
-        fetch('https://warehouse-management-server.herokuapp.com/items')
+        fetch('https://camping-gears-server.onrender.com/items')
             .then(res => res.json())
             .then(data => setitems(data))
     }, []);
@@ -25,7 +25,7 @@ const ItemDetail = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `https://warehouse-management-server.herokuapp.com/items/${itemsId}`;
+        const url = `https://camping-gears-server.onrender.com/items/${itemsId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -39,7 +39,7 @@ const ItemDetail = () => {
             found.quantity = found.quantity - 1;
             const setQuantity = parseInt(found.quantity);
             console.log(found.quantity);
-            const url = `https://warehouse-management-server.herokuapp.com/items/${itemsId}`;
+            const url = `https://camping-gears-server.onrender.com/items/${itemsId}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -56,7 +56,7 @@ const ItemDetail = () => {
     // Quantity Restock
 
     useEffect(() => {
-        fetch('https://warehouse-management-server.herokuapp.com/items')
+        fetch('https://camping-gears-server.onrender.com/items')
             .then(res => res.json())
             .then(data => setitems(data))
     }, []);
@@ -77,7 +77,7 @@ const ItemDetail = () => {
             }
             const setQuantity = parseInt(found.quantity);
             console.log(found.quantity);
-            const url = `https://warehouse-management-server.herokuapp.com/items/${itemsId}`;
+            const url = `https://camping-gears-server.onrender.com/items/${itemsId}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

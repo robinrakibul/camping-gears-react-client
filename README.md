@@ -3,7 +3,7 @@
 
 <!-- LIVE WEBSITE LINK -->
 Live Website URL: https://camping-gears-ac126.web.app/ <br/>
-Live Server URL: https://warehouse-management-server.herokuapp.com/
+Live Server URL: https://camping-gears-server.onrender.com/
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project

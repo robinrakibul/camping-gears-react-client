@@ -10,7 +10,7 @@ const AddNewItem = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `https://warehouse-management-server.herokuapp.com/additem`;
+        const url = `https://camping-gears-server.onrender.com/additem`;
         fetch(url, {
             method: 'POST',
             headers: {
